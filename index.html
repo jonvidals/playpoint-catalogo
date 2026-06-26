@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<link rel="icon" type="image/png" href="favicon.png">
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Catálogo PlayPoint</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&amp;family=Source+Sans+3:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "tertiary-fixed": "#e2e2e2",
+                        "surface-bright": "#fdf9f0",
+                        "tertiary-container": "#1b1b1b",
+                        "on-error": "#ffffff",
+                        "surface-variant": "#e6e2d9",
+                        "on-tertiary-fixed-variant": "#474747",
+                        "error": "#ba1a1a",
+                        "secondary": "#5f5e5e",
+                        "inverse-on-surface": "#f4f0e7",
+                        "primary-fixed-dim": "#c6c6c6",
+                        "outline": "#7e7576",
+                        "secondary-fixed": "#e5e2e1",
+                        "outline-variant": "#cfc4c5",
+                        "on-primary-fixed": "#1b1b1b",
+                        "secondary-fixed-dim": "#c9c6c5",
+                        "on-primary-container": "#848484",
+                        "surface-container-lowest": "#ffffff",
+                        "surface-container": "#f1ede5",
+                        "on-secondary": "#ffffff",
+                        "background": "#fdf9f0",
+                        "inverse-surface": "#31302b",
+                        "inverse-primary": "#c6c6c6",
+                        "surface-dim": "#dddad1",
+                        "surface-container-low": "#f7f3ea",
+                        "secondary-container": "#e5e2e1",
+                        "on-surface": "#1c1c16",
+                        "error-container": "#ffdad6",
+                        "surface-tint": "#5e5e5e",
+                        "surface-container-high": "#ece8df",
+                        "on-secondary-fixed-variant": "#474646",
+                        "ink-black": "#000000",
+                        "primary-fixed": "#e2e2e2",
+                        "tertiary": "#000000",
+                        "tertiary-fixed-dim": "#c6c6c6",
+                        "surface-cream": "#F3EFE6",
+                        "surface": "#fdf9f0",
+                        "on-primary": "#ffffff",
+                        "on-primary-fixed-variant": "#474747",
+                        "on-tertiary-fixed": "#1b1b1b",
+                        "on-background": "#1c1c16",
+                        "on-error-container": "#93000a",
+                        "on-surface-variant": "#4c4546",
+                        "on-secondary-fixed": "#1c1b1b",
+                        "surface-container-highest": "#e6e2d9",
+                        "edge-charcoal": "#0E0E0E",
+                        "on-tertiary": "#ffffff",
+                        "on-secondary-container": "#656464",
+                        "primary-container": "#1b1b1b",
+                        "on-tertiary-container": "#848484",
+                        "primary": "#000000"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "margin-desktop": "64px",
+                        "section-gap": "120px",
+                        "unit": "8px",
+                        "gutter": "24px",
+                        "margin-mobile": "20px"
+                    },
+                    "fontFamily": {
+                        "headline-lg-mobile": ["Playfair Display"],
+                        "body-md": ["\"Source Sans 3\""],
+                        "title-md": ["Playfair Display"],
+                        "body-lg": ["\"Source Sans 3\""],
+                        "headline-lg": ["Playfair Display"],
+                        "label-caps": ["\"Source Sans 3\""],
+                        "display-lg": ["Playfair Display"],
+                        "functional": ["\"Source Sans 3\""]
+                    },
+                    "fontSize": {
+                        "headline-lg-mobile": ["32px", { "lineHeight": "1.2", "fontWeight": "600" }],
+                        "body-md": ["16px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "title-md": ["24px", { "lineHeight": "1.4", "fontWeight": "500" }],
+                        "body-lg": ["18px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "headline-lg": ["40px", { "lineHeight": "1.2", "fontWeight": "600" }],
+                        "label-caps": ["12px", { "lineHeight": "1.2", "letterSpacing": "0.1em", "fontWeight": "700" }],
+                        "display-lg": ["64px", { "lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "functional": ["14px", { "lineHeight": "1.2", "fontWeight": "600" }]
+                    }
+                },
+            },
+        }
+    </script>
+</head>
+<body class="bg-surface-cream text-primary antialiased min-h-screen flex flex-col">
+<!-- TopNavBar from Shared Components -->
+<header class="bg-surface dark:bg-surface w-full border-b border-primary dark:border-primary">
+<div class="flex flex-col items-center justify-center w-full px-margin-mobile md:px-margin-desktop py-12 max-w-[1440px] mx-auto">
+<div class="flex flex-col items-center justify-center gap-6">
+<img alt="PlayPoint Logo" class="h-28 w-28 object-contain -translate-x-2 scale-[1.05]" src="favicon.png"/>
+<span class="font-label-caps text-[12px] md:text-[14px] tracking-[0.4em] text-primary font-bold uppercase text-center">Catálogo Exclusivo</span>
+</div>
+</div>
+</header>
+<!-- Main Content Canvas -->
+<main class="flex-grow w-full max-w-[1440px] mx-auto px-margin-mobile md:px-margin-desktop py-section-gap">
+<div class="w-full flex justify-between items-end border-b border-primary pb-4 mb-16">
+<h1 class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary uppercase tracking-tighter">LA COLECCIÓN</h1>
+<span class="font-label-caps text-label-caps text-primary uppercase">Catálogo de Alquiler</span>
+</div>
+<!-- Product Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-0 border-l border-t border-primary">
+<!-- Game: Jenga Gigante -->
+<article class="flex flex-col border-r border-b border-primary p-6 group">
+<div class="w-full aspect-[4/5] border border-primary mb-6 overflow-hidden bg-surface relative">
+<a href="#" class="lightbox-trigger block w-full h-full cursor-pointer overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out" data-alt="A beautifully crafted, oversized wooden Jenga set arranged meticulously on a pristine lawn. The lighting is bright and natural, casting sharp, elegant shadows that highlight the natural grain of the premium wood. The scene is shot from a low, dramatic angle, emphasizing scale and high-end luxury lifestyle photography. The overall palette is warm, earthy wood tones against vibrant green grass and a clean, light-mode sky." src="jenga.jpg"/>
+</a>
+<div class="absolute top-4 left-4 bg-primary text-surface-cream px-3 py-1 font-label-caps text-label-caps rounded-none border border-primary">POPULAR</div>
+</div>
+<div class="flex-grow flex flex-col justify-between">
+<div>
+<span class="font-label-caps text-label-caps text-secondary uppercase tracking-widest block mb-2">Madera Clásica</span>
+<h2 class="font-title-md text-title-md text-primary mb-2">Jenga Gigante</h2>
+</div>
+<div class="mt-4 pt-4 border-t border-primary flex flex-col gap-3">
+<p class="font-body-md text-sm text-secondary leading-relaxed">54 bloques de madera en colores simétricos negro y crema. Retira bloques de la base y apílalos en la cúpula hasta que colapse.</p>
+<span class="font-label-caps text-[11px] text-primary font-bold tracking-widest">2+ Jugadores</span>
+</div>
+</div>
+</article>
+<!-- Game: Lanza Sacos -->
+<article class="flex flex-col border-r border-b border-primary p-6 group">
+<div class="w-full aspect-[4/5] border border-primary mb-6 overflow-hidden bg-surface relative">
+<a href="#" class="lightbox-trigger block w-full h-full cursor-pointer overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out" data-alt="A premium custom-painted cornhole board (Lanza Sacos) made of dark stained walnut, positioned on a manicured garden path. High-end, heavy-duty canvas bean bags rest nearby. The lighting is golden hour, creating a sophisticated, country club atmosphere. The image is crisp, with deep shadows and high contrast, fitting a luxury editorial aesthetic." src="cosohoyos.jpg"/>
+</a>
+</div>
+<div class="flex-grow flex flex-col justify-between">
+<div>
+<span class="font-label-caps text-label-caps text-secondary uppercase tracking-widest block mb-2">Juego de Césped</span>
+<h2 class="font-title-md text-title-md text-primary mb-2">Lanza Sacos</h2>
+</div>
+<div class="mt-4 pt-4 border-t border-primary flex flex-col gap-3">
+<p class="font-body-md text-sm text-secondary leading-relaxed">Dos tableros clásicos de madera. Equipos lanzan saquitos buscando entrar en el orificio para mayor puntaje. Pura precisión.</p>
+<span class="font-label-caps text-[11px] text-primary font-bold tracking-widest">2 - 4 Jugadores</span>
+</div>
+</div>
+</article>
+<!-- Game: Golfito -->
+<article class="flex flex-col border-r border-b border-primary p-6 group">
+<div class="w-full aspect-[4/5] border border-primary mb-6 overflow-hidden bg-surface relative">
+<a href="#" class="lightbox-trigger block w-full h-full cursor-pointer overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out" data-alt="An elegant, portable miniature golf hole featuring high-grade synthetic putting turf framed in brushed steel and dark wood. A polished silver putter leans against the edge, next to a pristine white golf ball. The setting is a minimalist, modern indoor space with high-key lighting, emphasizing clean lines, luxury materials, and a sophisticated monochromatic aesthetic with subtle green accents." src="golfito.jpg"/>
+</a>
+</div>
+<div class="flex-grow flex flex-col justify-between">
+<div>
+<span class="font-label-caps text-label-caps text-secondary uppercase tracking-widest block mb-2">Mini Golf</span>
+<h2 class="font-title-md text-title-md text-primary mb-2">Golfito</h2>
+</div>
+<div class="mt-4 pt-4 border-t border-primary flex flex-col gap-3">
+<p class="font-body-md text-sm text-secondary leading-relaxed">Un circuito de putt-putt con obstáculos integrados. Ideal para medir tu puntería con estilo.</p>
+<span class="font-label-caps text-[11px] text-primary font-bold tracking-widest">1 - 4 Jugadores</span>
+</div>
+</div>
+</article>
+<!-- Game: Ajedrez Gigante -->
+<article class="flex flex-col border-r border-b border-primary p-6 group">
+<div class="w-full aspect-[4/5] border border-primary mb-6 overflow-hidden bg-surface relative">
+<a href="#" class="lightbox-trigger block w-full h-full cursor-pointer overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out" data-alt="A set of beautifully sculpted, giant chess pieces standing on a large, high-contrast black and white checkered canvas laid over an outdoor patio. The pieces are monolithic and matte, exuding a sense of architectural grandeur. The photograph is dramatic, with strong directional lighting casting stark, architectural shadows across the board, perfectly aligning with a stark, premium black-and-white editorial aesthetic." src="pingpong.jpg"/>
+</a>
+<div class="absolute top-4 left-4 bg-transparent text-primary px-3 py-1 font-label-caps text-label-caps rounded-none border border-primary">RESERVA ANTICIPADA</div>
+</div>
+<div class="flex-grow flex flex-col justify-between">
+<div>
+<span class="font-label-caps text-label-caps text-secondary uppercase tracking-widest block mb-2">Estrategia</span>
+<h2 class="font-title-md text-title-md text-primary mb-2">Ping Pong</h2>
+</div>
+<div class="mt-4 pt-4 border-t border-primary flex flex-col gap-3">
+<p class="font-body-md text-sm text-secondary leading-relaxed">El alma de cualquier evento competitivo. Una mesa profesional para partidos individuales o en parejas.</p>
+<span class="font-label-caps text-[11px] text-primary font-bold tracking-widest">2 - 4 Jugadores</span>
+</div>
+</div>
+</article>
+<!-- Game: Conecta 4 -->
+<article class="flex flex-col border-r border-b border-primary p-6 group">
+<div class="w-full aspect-[4/5] border border-primary mb-6 overflow-hidden bg-surface relative">
+<a href="#" class="lightbox-trigger block w-full h-full cursor-pointer overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out" data-alt="An oversized Connect 4 game frame constructed from polished mahogany wood, standing proudly in an upscale event space. The circular discs are heavy, custom-milled pieces in matte cream and deep black, avoiding the usual primary colors for a sophisticated look. Shot with shallow depth of field to emphasize the high-end craftsmanship and rich texture of the wood against a bright, airy background." src="bowling.jpg"/>
+</a>
+</div>
+<div class="flex-grow flex flex-col justify-between">
+<div>
+<span class="font-label-caps text-label-caps text-secondary uppercase tracking-widest block mb-2">Estrategia</span>
+<h2 class="font-title-md text-title-md text-primary mb-2">Bowling</h2>
+</div>
+<div class="mt-4 pt-4 border-t border-primary flex flex-col gap-3">
+<p class="font-body-md text-sm text-secondary leading-relaxed">Una pista de bolos adaptada para deslizar la bola y derribar los pinos. Elegancia y diversión asegurada.</p>
+<span class="font-label-caps text-[11px] text-primary font-bold tracking-widest">2+ Jugadores</span>
+</div>
+</div>
+</article>
+<!-- Game: Cornhole -->
+<article class="flex flex-col border-r border-b border-primary p-6 group">
+<div class="w-full aspect-[4/5] border border-primary mb-6 overflow-hidden bg-surface relative">
+<a href="#" class="lightbox-trigger block w-full h-full cursor-pointer overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out" data-alt="A pair of minimalist, stark white cornhole boards with thin black border lines, placed on an immaculate green lawn. The design is hyper-modern and stripped down, featuring only a perfect circle cutout and sharp angles. The lighting is stark and clear, creating a highly graphic, almost abstract composition that perfectly captures an ultra-premium, minimalist design ethos." src="garrita.jpg"/>
+</a>
+</div>
+<div class="flex-grow flex flex-col justify-between">
+<div>
+<span class="font-label-caps text-label-caps text-secondary uppercase tracking-widest block mb-2">Juego de Césped</span>
+<h2 class="font-title-md text-title-md text-primary mb-2">La Garrita</h2>
+</div>
+<div class="mt-4 pt-4 border-t border-primary flex flex-col gap-3">
+<p class="font-body-md text-sm text-secondary leading-relaxed">La clásica máquina arcade de atrapar premios. Emoción y nostalgia garantizada para todos tus invitados.</p>
+<span class="font-label-caps text-[11px] text-primary font-bold tracking-widest">1 Jugador</span>
+</div>
+</div>
+</article>
+</div>
+
+<!-- Pricing Section -->
+<div class="mt-20 border-t border-primary pt-8 flex flex-col md:flex-row justify-between uppercase w-full">
+    <div class="mb-8 md:mb-0 max-w-sm">
+        <h2 class="font-headline-lg-mobile md:font-headline-lg text-primary mb-4 tracking-tighter">PRECIOS DEL SERVICIO</h2>
+        <p class="font-body-md text-secondary normal-case">Alquiler completo de los juegos + montaje + desmontaje + facilitador durante el evento.</p>
+    </div>
+    <div class="flex flex-col gap-4 font-label-caps text-label-caps w-full md:w-1/3">
+        <div class="flex justify-between gap-12 border-b border-primary pb-2"><span>2 HORAS</span> <span>$150.000</span></div>
+        <div class="flex justify-between gap-12 border-b border-primary pb-2"><span>3 HORAS</span> <span>$200.000</span></div>
+        <div class="flex justify-between gap-12 border-b border-primary pb-2"><span>4 HORAS</span> <span>$250.000</span></div>
+        <div class="flex justify-between gap-12 pt-2 text-secondary"><span>HORA ADICIONAL</span> <span>$50.000</span></div>
+    </div>
+</div>
+
+</main>
+<!-- Footer from Shared Components -->
+<footer class="bg-surface dark:bg-surface w-full border-t border-primary dark:border-primary mt-auto">
+<div class="flex flex-col md:flex-row justify-between items-center w-full px-margin-mobile md:px-margin-desktop py-12 max-w-[1440px] mx-auto gap-8">
+<div class="font-label-caps text-label-caps text-primary dark:text-primary uppercase">
+                © 2026 PLAYPOINT. TODOS LOS DERECHOS RESERVADOS.
+            </div>
+<nav class="flex flex-col md:flex-row gap-6">
+<a class="flex items-center gap-2 text-primary dark:text-primary hover:opacity-70 transition-opacity" href="https://instagram.com/playpointccp" target="_blank" rel="noopener noreferrer">
+    <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+    <span style="font-family: 'Playfair Display', serif;" class="text-xl font-bold">@playpointccp</span>
+</a>
+<a class="flex items-center gap-2 text-primary dark:text-primary hover:opacity-70 transition-opacity" href="https://tiktok.com/@playpointccp" target="_blank" rel="noopener noreferrer">
+    <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-5.2 1.74 2.89 2.89 0 012.31-4.64 2.93 2.93 0 01.88.13V9.4a6.84 6.84 0 00-1-.05A6.33 6.33 0 005 15.68a6.34 6.34 0 0011.14 4.15c.05-.08.1-.17.14-.26V11.56a8.3 8.3 0 004.31 1.2v-3.38a4.83 4.83 0 01-1-2.69z"/></svg>
+    <span style="font-family: 'Playfair Display', serif;" class="text-xl font-bold">@playpointccp</span>
+</a>
+<a class="flex items-center gap-2 text-primary dark:text-primary hover:opacity-70 transition-opacity" href="mailto:playpointccp@gmail.com">
+    <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24"><path d="M0 3v18h24V3H0zm21.518 2L12 12.713 2.482 5h19.036zM2 19V7.183l10 8.392 10-8.392V19H2z"/></svg>
+    <span style="font-family: 'Playfair Display', serif;" class="text-xl font-bold">playpointccp@gmail.com</span>
+</a>
+</nav>
+</div>
+</footer>
+
+<!-- Lightbox Modal -->
+<div id="lightbox" class="fixed inset-0 z-50 bg-surface-cream/95 hidden flex-col items-center justify-center opacity-0 transition-opacity duration-300">
+    <button id="close-lightbox" class="absolute top-6 right-6 text-primary hover:text-gray-500 transition-colors cursor-pointer z-50">
+        <span class="material-symbols-outlined" style="font-size: 36px;">close</span>
+    </button>
+    <img id="lightbox-img" src="" alt="Vista ampliada" class="max-w-[90vw] max-h-[90vh] object-contain shadow-2xl scale-95 transition-transform duration-300 border border-primary">
+</div>
+
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+        const triggers = document.querySelectorAll('.lightbox-trigger');
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImg = document.getElementById('lightbox-img');
+        const closeBtn = document.getElementById('close-lightbox');
+
+        triggers.forEach(trigger => {
+            trigger.addEventListener('click', (e) => {
+                e.preventDefault();
+                const src = trigger.querySelector('img').getAttribute('src');
+                lightboxImg.src = src;
+                lightbox.classList.remove('hidden');
+                lightbox.classList.add('flex');
+                
+                // Trigger animation
+                setTimeout(() => {
+                    lightbox.classList.remove('opacity-0');
+                    lightboxImg.classList.remove('scale-95');
+                    lightboxImg.classList.add('scale-100');
+                }, 10);
+                
+                document.body.style.overflow = 'hidden'; // Evitar scroll de la pagina
+            });
+        });
+
+        const closeModal = () => {
+            lightbox.classList.add('opacity-0');
+            lightboxImg.classList.remove('scale-100');
+            lightboxImg.classList.add('scale-95');
+            setTimeout(() => {
+                lightbox.classList.add('hidden');
+                lightbox.classList.remove('flex');
+                document.body.style.overflow = '';
+            }, 300);
+        };
+
+        closeBtn.addEventListener('click', closeModal);
+        
+        lightbox.addEventListener('click', (e) => {
+            // Cerrar si hace clic fuera de la imagen
+            if(e.target === lightbox) closeModal();
+        });
+        
+        document.addEventListener('keydown', (e) => {
+            if(e.key === 'Escape' && !lightbox.classList.contains('hidden')) closeModal();
+        });
+    });
+</script>
+</body></html>
